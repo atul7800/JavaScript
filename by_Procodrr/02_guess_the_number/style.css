@@ -1,0 +1,30 @@
+
+body{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+#submit:disabled{
+    cursor:not-allowed
+}
+
+#reset:disabled{
+    cursor:not-allowed
+}
+
+.btnHolder{
+    margin: 20px auto;
+}
+
+#submit, #restart{
+    padding: 7px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+}

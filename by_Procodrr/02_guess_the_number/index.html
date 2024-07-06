@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="counter">
+      <form action="" id="guessForm">
+        <h2 id="h1">
+          Enter a number between <span id="min"></span> to
+          <span id="max"></span>
+        </h2>
+        <div class="xValue">
+          <input
+            id="inputBox"
+            placeholder="Enter a number"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div class="btnHolder">
+          <button id="submit">Submit</button>&nbsp;
+          <button id="restart" disabled>Restart</button>
+        </div>
+        <h3 id="hThree" style="display: none">
+          Too <span id="high-low"></span>
+        </h3>
+        <h2>Your inputs <span id="yourGuesses"></span></h2>
+      </form>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
