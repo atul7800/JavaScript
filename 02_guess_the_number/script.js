@@ -1,3 +1,6 @@
+let counter = 0;
+      let min = document.getElementById("min");
+      let max = document.getElementById("max");
       let highLow = document.getElementById('high-low')
       const hThree = document.getElementById('hThree')
       let yourInputs = [];
@@ -6,18 +9,28 @@
       const restart = document.getElementById('restart')
       const inputBox = document.getElementById('inputBox')
       const form = document.getElementById('guessForm')
+      let randomMinNumber = Math.floor(Math.random() * 49 + 1);
+      let randomMaxNumber = Math.floor(Math.random() * 50 + 1);
       let actualRandomNumber = Math.floor(Math.random() * 50 + 1);
+
+      while(randomMinNumber === randomMaxNumber || randomMinNumber > randomMaxNumber){
+        randomMaxNumber = Math.floor(Math.random() * 10 + 1);
+      }
+
+      while((actualRandomNumber === randomMinNumber) || (actualRandomNumber === randomMaxNumber) || actualRandomNumber < randomMinNumber || actualRandomNumber > randomMaxNumber){
+        actualRandomNumber = Math.floor(Math.random() * 50 + 1);
+      }
+
+      min.innerText = randomMinNumber;
+      max.innerText = randomMaxNumber;
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        restart.disabled = false;
         yourInputs.push(parseInt(inputBox.value));
         yourGuesses.innerText = yourInputs.join(', ')
 
         if(parseInt(inputBox.value) === actualRandomNumber){
           hThree.textContent = 'Congratultions! You got it.'
-          submit.disabled = true;
-          
         } else{
           
             hThree.style.display = 'block';
@@ -29,13 +42,12 @@
             }
           
         }
-
-        
       });
 
       restart.addEventListener('click', () => {
-        yourInputs = [];
-        yourGuesses.innerText = '';
-        inputBox.value = '';
-        actualRandomNumber = Math.floor(Math.random() * 50 + 1);
+        console.log(Date.now())
       })
+
+      // inputBox.addEventListener('input', () => {
+        
+      // })

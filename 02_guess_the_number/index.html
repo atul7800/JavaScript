@@ -9,16 +9,16 @@
   <body>
     <div class="counter">
       <form action="" id="guessForm">
-        <h2 id="h1">Enter a number between 1 to 50</h2>
+        <h2 id="h1">
+          Enter a number between <span id="min"></span> to
+          <span id="max"></span>
+        </h2>
         <div class="xValue">
           <input
             id="inputBox"
             placeholder="Enter a number"
             type="number"
-            value=""
-            min="1"
-            max="50"
-            required
+            value="0"
           />
         </div>
         <div class="btnHolder">
