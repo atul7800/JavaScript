@@ -1,0 +1,14 @@
+body{
+    background-color: #F2F9ED;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.heading{
+    font-size: 64px;
+    color: #48A300;
+    text-align: center;
+}
+
+.heading span{
+    color: black;
+}
